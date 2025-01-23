@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDecimalExpression"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Expresión con Decimales"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.Button"
+        app:backgroundTint="@color/blue_500"/>
+
+    <!-- Botón para analizar valores -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnalyzeValues"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Analizar Valores"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btnDecimalExpression"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.Button"
+        app:backgroundTint="@color/blue_500"/>
+
+    <!-- Botón para la tabla de multiplicar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMultiplicationTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tabla de Multiplicar"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btnAnalyzeValues"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.Button"
+        app:backgroundTint="@color/blue_500"/>
+
+    <!-- Botón para el factorial -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFactorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Factorial"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btnMultiplicationTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.Button"
+        app:backgroundTint="@color/blue_500"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/btnFactorial"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.8"
+
+
+    android:layout_marginTop="16dp"
+    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/blue_500">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etMultilineInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Resultados aparecerán aquí"
+        android:inputType="textMultiLine"
+        android:gravity="start"
+        android:textColorHint="@color/blue_500"
+        android:textCursorDrawable="@color/blue_500"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
