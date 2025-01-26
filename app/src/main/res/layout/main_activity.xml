@@ -1,99 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnDecimalExpression"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Expresión con Decimales"
-        android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="16dp"
-        style="@style/Widget.Material3.Button"
-        app:backgroundTint="@color/blue_500"/>
+        app:columnCount="2"
+        app:rowCount="2"
+        android:layout_margin="8dp"> <!-- Espaciado general -->
 
-    <!-- Botón para analizar valores -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAnalyzeValues"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Analizar Valores"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/btnDecimalExpression"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="16dp"
-        style="@style/Widget.Material3.Button"
-        app:backgroundTint="@color/blue_500"/>
+        <!-- Expresión 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExpression1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="√(a√b) - √(b√a)"
+            android:textSize="12sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_row="0"
+            app:layout_column="0"
+            style="@style/Widget.Material3.Button"
+            app:backgroundTint="@color/blue_500"
+            android:layout_margin="4dp"/> <!-- Espaciado entre botones -->
 
-    <!-- Botón para la tabla de multiplicar -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnMultiplicationTable"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Tabla de Multiplicar"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/btnAnalyzeValues"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="16dp"
-        style="@style/Widget.Material3.Button"
-        app:backgroundTint="@color/blue_500"/>
+        <!-- Expresión 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExpression2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="(3ab)/∜(a²b³c)"
+            android:textSize="12sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_row="0"
+            app:layout_column="1"
+            style="@style/Widget.Material3.Button"
+            app:backgroundTint="@color/blue_500"
+            android:layout_margin="4dp"/> <!-- Espaciado entre botones -->
 
-    <!-- Botón para el factorial -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFactorial"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Factorial"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/btnMultiplicationTable"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="16dp"
-        style="@style/Widget.Material3.Button"
-        app:backgroundTint="@color/blue_500"/>
+        <!-- Expresión 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExpression3"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="√(a+b)/(√(a+b)-√(a−b))"
+            android:textSize="12sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_row="1"
+            app:layout_column="0"
+            style="@style/Widget.Material3.Button"
+            app:backgroundTint="@color/blue_500"
+            android:layout_margin="4dp"/> <!-- Espaciado entre botones -->
 
+        <!-- Expresión 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExpression4"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="√((X₂−X₁)² + (Y₂−Y₁)²)"
+            android:textSize="12sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_row="1"
+            app:layout_column="1"
+            style="@style/Widget.Material3.Button"
+            app:backgroundTint="@color/blue_500"
+            android:layout_margin="4dp"/> <!-- Espaciado entre botones -->
 
+    </androidx.gridlayout.widget.GridLayout>
 
+        <!-- Resto de botones... -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnalyzeValues"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Analizar Valores"
+            style="@style/Widget.Material3.Button"
+            app:layout_constraintTop_toBottomOf="@id/gridLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@color/blue_500"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMultiplicationTable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tabla de Multiplicar"
+            style="@style/Widget.Material3.Button"
+            app:layout_constraintTop_toBottomOf="@id/btnAnalyzeValues"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@color/blue_500"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFactorial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Factorial"
+            style="@style/Widget.Material3.Button"
+            app:layout_constraintTop_toBottomOf="@id/btnMultiplicationTable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@color/blue_500"/>
+
+    <!-- Botones adicionales -->
+
+    <!-- Resultados -->
     <com.google.android.material.textfield.TextInputLayout
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@id/btnFactorial"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintWidth_percent="0.8"
-
-
-    android:layout_marginTop="16dp"
-    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/btnFactorial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
         app:boxStrokeColor="@color/blue_500">
 
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etMultilineInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Resultados aparecerán aquí"
-        android:inputType="textMultiLine"
-        android:gravity="start"
-        android:textColorHint="@color/blue_500"
-        android:textCursorDrawable="@color/blue_500"/>
-
-</com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMultilineInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Resultados aparecerán aquí"
+            android:inputType="textMultiLine"
+            android:gravity="start"
+            android:textColorHint="@color/blue_500"
+            android:textCursorDrawable="@color/blue_500"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
